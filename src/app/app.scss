@@ -1,0 +1,124 @@
+/* Espaciador en la barra superior */
+.spacer {
+  flex: 1; /* Empuja el contenido a los extremos */
+ 
+}
+
+/* Contenedor principal */
+.contenedor {
+  padding: 20px; /* Espacio interno */
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  gap: 20px; /* Separación entre tarjetas */
+}
+
+/* Grid del formulario */
+.formulario .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 15px;
+}
+
+/* Campos ocupan todo el ancho */
+mat-form-field {
+  width: 100%;
+}
+
+mat-card {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+/* Contenedor del resumen */
+.resumen-grid {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo base de los cuadros */
+.box {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Colores de resumen */
+.total {
+  background: #178cdf;
+}
+
+.pendientes {
+  background: #dca03f;
+}
+
+.completadas {
+  background: #07b615;
+}
+
+/* Botones de filtros */
+.filtros {
+  display: flex;
+  gap: 10px;
+}
+
+/* Cada actividad */
+.actividad {
+  display: flex;
+  justify-content: space-between; /* separa info y acciones */
+  align-items: center;
+  border-bottom: 1px solid #c1b1b1;
+  padding: 10px 0;
+}
+
+/* Título de actividad */
+.info h3 {
+  margin: 0; /* elimina margen por defecto */
+}
+
+/* Badge de prioridad */
+.badge {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+/* Colores por prioridad */
+.alta {
+  background: red;
+}
+
+.media {
+  background: orange;
+}
+
+.baja {
+  background: green;
+}
+
+/* Acciones (checkbox + eliminar) */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* RESPONSIVE (celular) */
+@media (max-width: 600px) {
+  .formulario .grid {
+    grid-template-columns: 1fr; /* una columna */
+  }
+
+  .resumen-grid {
+    flex-direction: column; /* vertical */
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #d47a7a;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid hsl(0, 11%, 53%);
+}
